@@ -256,6 +256,7 @@ section[data-testid="stSidebar"]{
         ),
         ("📥", "Export Center", "Download CSV, Excel, and PDF reports."),
     ]
+    st.markdown(AI_BAND, unsafe_allow_html=True)
     for row in range(0, len(features), 3):
         cols = st.columns(3)
         for col, (icon, title, text) in zip(cols, features[row : row + 3]):
@@ -343,6 +344,7 @@ def login_page() -> None:
         """,
         unsafe_allow_html=True,
     )
+    st.markdown(LOGIN_CARD, unsafe_allow_html=True)
     left, center, right = st.columns([1, 1.2, 1])
     with center:
         login_tab, signup_tab = st.tabs(["Login", "Sign Up"])
