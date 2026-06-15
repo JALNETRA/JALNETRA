@@ -62,6 +62,16 @@ def trend_chart(df: pd.DataFrame, metrics: list[str], title: str):
     )
 
     fig.update_xaxes(type="category")
+    fig.update_xaxes(
+        type="category",
+        title_font=dict(color="black", size=14),
+        tickfont=dict(color="black", size=12),
+    )
+
+    fig.update_yaxes(
+        title_font=dict(color="black", size=14), tickfont=dict(color="black", size=12)
+    )
+
     fig.update_layout(**PLOTLY_THEME)
     fig.update_layout(
         paper_bgcolor="white",
@@ -175,7 +185,16 @@ def forecast_chart(
         markers=True,
         title=f"{entity_label} — {metric_label(metric_col)} Forecast",
     )
-    fig.update_xaxes(type="category")
+
+    fig.update_xaxes(
+        type="category",
+        title_font=dict(color="black", size=14),
+        tickfont=dict(color="black", size=12),
+    )
+
+    fig.update_yaxes(
+        title_font=dict(color="black", size=14), tickfont=dict(color="black", size=12)
+    )
     fig.update_layout(**PLOTLY_THEME)
     fig.update_layout(
         paper_bgcolor="white",
@@ -208,6 +227,15 @@ def multi_metric_forecast_chart(forecast: pd.DataFrame, entity: str):
         title=f"{entity} — 2026-2030 Forecast",
     )
     fig.update_xaxes(type="category")
+    fig.update_xaxes(
+        type="category",
+        title_font=dict(color="black", size=14),
+        tickfont=dict(color="black", size=12),
+    )
+
+    fig.update_yaxes(
+        title_font=dict(color="black", size=14), tickfont=dict(color="black", size=12)
+    )
     fig.update_layout(**PLOTLY_THEME)
     fig.update_layout(
         paper_bgcolor="white",
