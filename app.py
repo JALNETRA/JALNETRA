@@ -269,6 +269,7 @@ section[data-testid="stSidebar"]{
 
 
 def login_page() -> None:
+    st.markdown(LOGIN_CARD, unsafe_allow_html=True)
     st.markdown(
         """
         <style>
@@ -344,7 +345,7 @@ def login_page() -> None:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown(LOGIN_CARD, unsafe_allow_html=True)
+
     left, center, right = st.columns([1, 1.2, 1])
     with center:
         login_tab, signup_tab = st.tabs(["Login", "Sign Up"])
