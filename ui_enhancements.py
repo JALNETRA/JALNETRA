@@ -187,33 +187,44 @@ def forecast_kpi_cards(stage: float, category: str, confidence: float) -> str:
 
 PLOTLY_THEME = dict(
     template="plotly_white",
-    font=dict(family="Inter, sans-serif", color="#0F172A", size=12),
+    font=dict(family="Inter, sans-serif", color="#000000", size=13),
     paper_bgcolor="#FFFFFF",
     plot_bgcolor="#FFFFFF",
     margin=dict(l=16, r=16, t=48, b=16),
     title=dict(
-        font=dict(family="Space Grotesk, sans-serif", size=17, color="#0F172A"),
+        font=dict(family="Space Grotesk, sans-serif", size=18, color="#000000"),
         x=0.02,
         xanchor="left",
     ),
     legend=dict(
         bgcolor="#FFFFFF",
-        bordercolor="#E2E8F0",
+        bordercolor="#D1D5DB",
         borderwidth=1,
-        font=dict(size=11),
+        font=dict(size=12, color="#000000"),
     ),
     xaxis=dict(
         showgrid=True,
-        gridcolor="#E2E8F0",
+        gridcolor="#D1D5DB",
+        gridwidth=1,
         zeroline=False,
-        tickfont=dict(size=11),
+        tickfont=dict(size=12, color="#000000"),
     ),
     yaxis=dict(
         showgrid=True,
-        gridcolor="#E2E8F0",
+        gridcolor="#D1D5DB",
+        gridwidth=1,
         zeroline=False,
-        tickfont=dict(size=11),
+        tickfont=dict(size=12, color="#000000"),
     ),
+    colorway=[
+        "#0057D9",  # Dark Blue
+        "#00A3E0",  # Sky Blue
+        "#00A86B",  # Green
+        "#F59E0B",  # Orange
+        "#DC2626",  # Red
+        "#7C3AED",  # Purple
+        "#EC4899",  # Pink
+    ],
 )
 
 # Usage: fig.update_layout(**PLOTLY_THEME)
