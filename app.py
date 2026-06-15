@@ -155,8 +155,8 @@ def send_otp(receiver_email: str) -> bool:
     message["From"] = email_address
     message["To"] = receiver_email
     try:
-        st.write("EMAIL:", email_address)
-        st.write("PASSWORD EXISTS:", bool(email_password))
+        # st.write("EMAIL:", email_address)
+        # st.write("PASSWORD EXISTS:", bool(email_password))
 
         with smtplib.SMTP("smtp.gmail.com", 587, timeout=20) as server:
             # st.write("SMTP Connected")
